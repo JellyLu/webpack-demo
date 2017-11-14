@@ -4,5 +4,10 @@ module.exports = {
     path: __dirname + "/public",
     filename: "bundle.js"
   },
-  devtool: 'eval-source-map'
+  devtool: "eval-source-map",
+  devServer: {
+    contentBase: "./public",
+    historyApiFallback: true,
+    inline: true
+  }
 }
