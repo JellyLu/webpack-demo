@@ -1,7 +1,14 @@
-const config = require('./config.json');
+import React, {Component} from 'react'
+import config from './config.json';
 
-module.exports = function() {
-  var header = document.createElement('div');
-  header.textContent = config.message;
-  return header;
-};
+class Header extends Component{
+  render() {
+    return (
+      <div>
+        {config.message}
+      </div>
+    );
+  }
+}
+
+export default Header

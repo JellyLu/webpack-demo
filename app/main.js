@@ -1,2 +1,5 @@
-const header = require('./header.js');
-document.querySelector("#root").appendChild(header());
+import React from 'react';
+import {render} from 'react-dom';
+import Header from './header';
+
+render(<Header />, document.getElementById('root'));
