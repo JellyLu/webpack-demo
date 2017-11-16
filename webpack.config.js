@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
   entry:  __dirname + "/app/main.js",
   output: {
@@ -33,5 +35,8 @@ module.exports = {
      ]
     }
     ]
-  }
+  },
+  plugins: [
+    new webpack.BannerPlugin('Copyright @617@')
+  ]
 }
