@@ -11,7 +11,8 @@ module.exports = {
   devServer: {
     contentBase: "./public",
     historyApiFallback: true,
-    inline: true
+    inline: true,
+    hot: true
   },
   module: {
     rules: [
@@ -41,6 +42,7 @@ module.exports = {
     new webpack.BannerPlugin('Copyright @617@'),
     new HtmlWebpackPlugin({
       template: __dirname + "/app/index.tmpl.html"
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ]
 }
